@@ -1,16 +1,22 @@
 import { Navbar } from "./components/Navbar"
 import { About } from "./components/About"
+import React from "react"
+
+import { ThemeProvider } from "./components/ThemeProvider"
 
 function App() {
   return (
-    <div className="w-dvw h-dvh dark ">
-      <main className=" bg-slate-100 dark:bg-neutral-900 dark:text-white">
+    <ThemeProvider
+      defaultTheme="dark"
+      storageKey="vite-ui-theme"
+    >
+      <main className="w-dvw h-dvh">
         <Navbar />
         <About sectionType="about" />
         <About sectionType="projects" />
         <About sectionType="contact" />
       </main>
-    </div>
+    </ThemeProvider>
   )
 }
 
