@@ -9,11 +9,13 @@ import {
 } from "@/components/ui/dropdown-menu"
 import { useTheme } from "@/components/ThemeProvider"
 import { Button } from "../ui/button"
+import { useNavigate } from "react-router-dom"
 
 export function Navbar() {
   const [isOptionsOpen, setIsOptionOpen] = useState(false)
   const [isDesktopOptionsOpen, setDesktopIsOptionOpen] = useState(false)
   const { setTheme } = useTheme()
+  const navigate = useNavigate()
 
   function toggleOpenOptions() {
     setIsOptionOpen(!isOptionsOpen)
@@ -23,9 +25,13 @@ export function Navbar() {
     setDesktopIsOptionOpen(!isDesktopOptionsOpen)
   }
 
+  function handleNavigate(page: string) {
+    navigate(page)
+  }
+
   return (
     <nav className="bg-transparent">
-      <div className="w-dvw mx-auto px-4 border-b-[1px] border-gray-900 border-opacity-10 h-16 flex items-center justify-around dark:border-gray-100 dark:border-opacity-10">
+      <div className="lg:max-w-5xl mx-auto px-4 border-b-[1px] border-gray-900 border-opacity-10 h-16 flex items-center justify-between dark:border-gray-100 dark:border-opacity-10">
         <div className="flex">
           <div className="hidden md:flex space-x-1 items-center font-bold text-2xl">
             <a
@@ -52,30 +58,20 @@ export function Navbar() {
         </div>
 
         <div className="hidden md:flex items-center space-x-1">
-          <a
-            href="#about"
-            className="py-5 px-3 duration-200 ease-[ease-in-out] dark:hover:text-white"
+          <Button
+            variant={"ghost"}
+            onClick={() => handleNavigate("/")}
           >
-            Início
-          </a>
-          <a
-            href="#about"
-            className="py-5 px-3 duration-200 ease-[ease-in-out] dark:hover:text-white"
-          >
-            Sobre mim
-          </a>
-          <a
-            href="#projects"
-            className="py-5 px-3  duration-200 ease-[ease-in-out] dark:hover:text-white"
+            Home
+          </Button>
+
+          <Button
+            variant={"ghost"}
+            onClick={() => handleNavigate("/projects")}
           >
             Projetos
-          </a>
-          <a
-            href="#contact"
-            className="py-5 px-3 duration-200 ease-[ease-in-out] dark:hover:text-white"
-          >
-            Contato
-          </a>
+          </Button>
+
           <DropdownMenu
             open={isDesktopOptionsOpen}
             onOpenChange={toggleDesktopOpenOptions}
@@ -171,7 +167,7 @@ export function Navbar() {
             onOpenChange={toggleOpenOptions}
           >
             <DropdownMenuTrigger
-              className=" mr-4"
+              className="mr-4"
               asChild
             >
               <Button
