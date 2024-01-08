@@ -10,11 +10,9 @@ function App() {
       defaultTheme="dark"
       storageKey="vite-ui-theme"
     >
-      <main className="w-dvw h-dvh">
-        <Navbar />
+      <Navbar />
+      <main className="w-auto h-auto ">
         <About sectionType="about" />
-        <About sectionType="projects" />
-        <About sectionType="contact" />
       </main>
     </ThemeProvider>
   )
