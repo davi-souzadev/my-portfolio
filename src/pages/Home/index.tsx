@@ -7,7 +7,9 @@ export default function Home() {
     <>
       <Navbar />
       <main className="w-auto h-auto ">
-        <About sectionType="about" />
+        <section className="py-16 ">
+          <About />
+        </section>
       </main>
     </>
   )
