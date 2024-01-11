@@ -1,6 +1,5 @@
 import { ExperienceCard } from "../ExperienceCard"
 import { Badge } from "../ui/badge"
-import { Card, CardContent, CardHeader, CardTitle } from "../ui/card"
 
 const badgeStacks = ["ReactJS", "JavaScript", "TypeScript", "Python", "Ruby on Rails"]
 const experiences = [

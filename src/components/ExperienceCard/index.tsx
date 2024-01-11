@@ -1,12 +1,4 @@
-import React from "react"
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
+import { Card, CardContent, CardHeader } from "@/components/ui/card"
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
 
 type ExperienceCardProps = {
@@ -18,7 +10,7 @@ type ExperienceCardProps = {
 
 export function ExperienceCard({ fallback, company, role, since }: ExperienceCardProps) {
   return (
-    <Card className="flex flex-row items-center border-none gap-4">
+    <Card className="flex flex-row items-center border-none gap-4 h-24 mt-4">
       <CardHeader className="p-0">
         <Avatar className="h-12 w-12">
           <AvatarImage src="" />
