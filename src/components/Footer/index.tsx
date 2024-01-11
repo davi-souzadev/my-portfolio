@@ -2,7 +2,7 @@ export function Footer() {
   const year = new Date().getFullYear()
 
   return (
-    <div className="max-w-3xl mx-auto px-4">
+    <div className="max-w-3xl flex flex-start px-4">
       <span className="text-muted-foreground decoration-slice cursor-pointer">
         &copy; {year}{" "}
         <a

@@ -5,6 +5,7 @@ import React from "react"
 import { ThemeProvider } from "./components/ThemeProvider"
 import AppRoutes from "./routes/routes"
 import { BrowserRouter } from "react-router-dom"
+import { Footer } from "./components/Footer"
 
 function App() {
   return (
@@ -13,7 +14,11 @@ function App() {
         defaultTheme="dark"
         storageKey="vite-ui-theme"
       >
-        <AppRoutes />
+        <div className="container flex min-h-screen flex-col px-8 pb-8 md:w-[45rem]">
+          <Navbar />
+          <AppRoutes />
+          <Footer />
+        </div>
       </ThemeProvider>
     </BrowserRouter>
   )
