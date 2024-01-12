@@ -9,13 +9,13 @@ import {
 } from "@/components/ui/dropdown-menu"
 import { useTheme } from "@/components/ThemeProvider"
 import { Button } from "../ui/button"
-import { useNavigate } from "react-router-dom"
+import { useRouter } from "../../hooks/useRouter"
 
 export function Navbar() {
   const [isOptionsOpen, setIsOptionOpen] = useState(false)
   const [isDesktopOptionsOpen, setDesktopIsOptionOpen] = useState(false)
   const { setTheme } = useTheme()
-  const navigate = useNavigate()
+  const { navigate } = useRouter()
 
   function toggleOpenOptions() {
     setIsOptionOpen(!isOptionsOpen)
@@ -35,8 +35,8 @@ export function Navbar() {
         <div className="flex">
           <div className="hidden md:flex space-x-1 items-center font-bold text-2xl">
             <a
-              href="#about"
               className="flex"
+              onClick={() => handleNavigate("/")}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
