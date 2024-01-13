@@ -17,7 +17,7 @@ function App() {
         storageKey="vite-ui-theme"
       >
         <QueryClientProvider client={queryClient}>
-          <div className="container flex h-dvh flex-col px-8 pb-8 md:w-[45rem]">
+          <div className="container flex min-h-screen justify-between flex-col px-8 pb-8 md:w-[45rem]">
             <Navbar />
             <AppRoutes />
             <Footer />

@@ -1,5 +1,7 @@
+import { GithubIcon, LinkedinIcon } from "lucide-react"
 import { ExperienceCard } from "../ExperienceCard"
 import { Badge } from "../ui/badge"
+import { FaLinkedin, FaGithub } from "react-icons/fa"
 
 const badgeStacks = ["ReactJS", "JavaScript", "TypeScript", "Python", "Ruby on Rails"]
 const experiences = [
@@ -57,6 +59,22 @@ export function About() {
             {badge}
           </Badge>
         ))}
+      </div>
+      <div className="flex mt-6 gap-4 items-start">
+        <a
+          href="https://github.com/davi-souzadev"
+          target="blank"
+          className="rounded h-9 w-9 hover:bg-accent flex justify-center items-center"
+        >
+          <FaGithub className="h-5 w-5" />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/davi-souzadev/"
+          className="rounded h-9 w-9 hover:bg-accent flex justify-center items-center"
+          target="blank"
+        >
+          <FaLinkedin className="h-5 w-5" />
+        </a>
       </div>
       <div className="mt-12 ">
         <h2 className="text-2xl">Experiências</h2>

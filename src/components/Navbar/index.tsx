@@ -30,7 +30,7 @@ export function Navbar() {
   }
 
   return (
-    <nav className="w-full bg-transparent mx-auto">
+    <nav className="w-full bg-transparent mx-auto mt-4">
       <div className="w-full px-4 border-b-[1px] border-gray-900 border-opacity-10 h-16 flex items-center justify-between dark:border-gray-100 dark:border-opacity-10">
         <div className="flex">
           <div className="hidden md:flex space-x-1 items-center font-bold text-2xl">
