@@ -1,7 +1,9 @@
 import React from "react"
 import { useQuery } from "@tanstack/react-query"
+import { FaExternalLinkAlt } from "react-icons/fa"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "../../components/ui/badge"
+import { ProjectSkeleton } from "../../components/ProjectSkeleton"
 
 type RepoProps = {
   id: number
@@ -37,23 +39,15 @@ export function Projects() {
       })
     : []
 
-  if (isPending) {
-    return <span>Loading...</span>
-  }
-
   if (isError) {
     return <span>Error: {error.message}</span>
   }
-
-  // formatar cards
-  // Limitar resultados
-  //
 
   return (
     <div className="h-full w-full flex flex-col mt-16">
       <h2 className="text-2xl mb-4">Projetos</h2>
       <div className="grid w-full grid-cols-1 gap-3 md:grid-cols-2">
-        {!isLoading &&
+        {!isLoading ? (
           filteredRepos.slice(0, 6).map((repo: RepoProps) => {
             return (
               <Card
@@ -67,20 +61,7 @@ export function Projects() {
                       href={repo.html_url}
                       target="blank"
                     >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        strokeWidth={1.5}
-                        stroke="currentColor"
-                        className="w-5 h-5 text-muted-foreground"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
-                        />
-                      </svg>
+                      <FaExternalLinkAlt className="w-4 h-4 text-muted-foreground" />
                     </a>
                   </div>
                   <p className="text-sm text-muted-foreground">{repo.description}</p>
@@ -111,7 +92,10 @@ export function Projects() {
                 </CardContent>
               </Card>
             )
-          })}
+          })
+        ) : (
+          <ProjectSkeleton />
+        )}
       </div>
     </div>
   )

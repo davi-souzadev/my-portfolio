@@ -1,4 +1,3 @@
-import { GithubIcon, LinkedinIcon } from "lucide-react"
 import { ExperienceCard } from "../ExperienceCard"
 import { Badge } from "../ui/badge"
 import { FaLinkedin, FaGithub } from "react-icons/fa"
