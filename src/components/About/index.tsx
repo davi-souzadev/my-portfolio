@@ -1,6 +1,6 @@
 import { ExperienceCard } from "../ExperienceCard"
+import { SocialMedia } from "../SocialMedia"
 import { Badge } from "../ui/badge"
-import { FaLinkedin, FaGithub } from "react-icons/fa"
 
 const badgeStacks = ["ReactJS", "JavaScript", "TypeScript", "Python", "Ruby on Rails"]
 const experiences = [
@@ -38,7 +38,7 @@ const experiences = [
 
 export function About() {
   return (
-    <div className="lg:max-w-3xl mx-auto px-4 flex flex-col">
+    <div className="max-w-full lg:max-w-3xl mx-auto px-4 flex flex-col ">
       {/* Cards com  Experiências/ Cursos */}
       <h1 className="text-2xl ">Olá, meu nome é Davi.</h1>
       <p className="mt-4 text-lg text-muted-foreground">
@@ -48,7 +48,7 @@ export function About() {
       <p className="mt-4 text-lg text-muted-foreground">
         Essas são minhas as principais Stacks que utilizo no meu dia a dia:
       </p>
-      <div className="mt-4 flex gap-4 text-muted-foreground">
+      <div className="mt-4 flex flex-wrap justify-center md:justify-start gap-4 text-muted-foreground">
         {badgeStacks.map((badge) => (
           <Badge
             key={badge}
@@ -59,22 +59,7 @@ export function About() {
           </Badge>
         ))}
       </div>
-      <div className="flex mt-6 gap-4 items-start">
-        <a
-          href="https://github.com/davi-souzadev"
-          target="blank"
-          className="rounded h-9 w-9 hover:bg-accent flex justify-center items-center"
-        >
-          <FaGithub className="h-5 w-5" />
-        </a>
-        <a
-          href="https://www.linkedin.com/in/davi-souzadev/"
-          className="rounded h-9 w-9 hover:bg-accent flex justify-center items-center"
-          target="blank"
-        >
-          <FaLinkedin className="h-5 w-5" />
-        </a>
-      </div>
+      <SocialMedia />
       <div className="mt-12 ">
         <h2 className="text-2xl">Experiências</h2>
 

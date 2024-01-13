@@ -44,15 +44,27 @@ export function Projects() {
   }
 
   return (
-    <div className="h-full w-full flex flex-col mt-16">
+    <div className="h-full w-full flex flex-col mt-8 pb-8 gap-4 px-4 ">
       <h2 className="text-2xl mb-4">Projetos</h2>
-      <div className="grid w-full grid-cols-1 gap-3 md:grid-cols-2">
+      <p className="text-muted-foreground">
+        Projetos desenvolvidos em cursos, porjetos pessoais ou desafios de código.
+        Encontre mais no meu{" "}
+        <a
+          href="https://github.com/davi-souzadev"
+          className="underline"
+          target="blank"
+        >
+          Github
+        </a>
+        .
+      </p>
+      <div className="flex flex-col items-start md:grid w-full grid-cols-1 gap-3 justify-center md:grid-cols-2">
         {!isLoading ? (
           filteredRepos.slice(0, 6).map((repo: RepoProps) => {
             return (
               <Card
                 key={repo.id}
-                className="w-80 h-40 flex flex-col justify-between"
+                className="w-full md:w-80  h-40 flex flex-col justify-between"
               >
                 <CardHeader className="p-6">
                   <div className="flex justify-between">

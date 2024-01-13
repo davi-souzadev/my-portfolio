@@ -30,12 +30,12 @@ export function Navbar() {
   }
 
   return (
-    <nav className="w-full bg-transparent mx-auto mt-4">
-      <div className="w-full px-4 border-b-[1px] border-gray-900 border-opacity-10 h-16 flex items-center justify-between dark:border-gray-100 dark:border-opacity-10">
-        <div className="flex">
-          <div className="hidden md:flex space-x-1 items-center font-bold text-2xl">
+    <nav className="w-full bg-transparent  md:mx-auto mt-4">
+      <div className="w-full border-b-[1px] border-gray-900 border-opacity-10 h-16 flex items-center justify-between dark:border-gray-100 dark:border-opacity-10">
+        <div className="flex ml-4 md:ml-0">
+          <div className="md:flex space-x-1 items-center justify-center font-bold w-40">
             <a
-              className="flex"
+              className="flex text-xl items-center md:text-2xl w-full"
               onClick={() => handleNavigate("/")}
             >
               <svg
@@ -44,7 +44,7 @@ export function Navbar() {
                 viewBox="0 0 24 24"
                 strokeWidth={1.5}
                 stroke="currentColor"
-                className="w-8 h-8"
+                className="w-6 h-6 md:w-8 md:h-8"
               >
                 <path
                   strokeLinecap="round"
@@ -292,7 +292,7 @@ export function Navbar() {
                   />
                 </svg>
 
-                <a href="#about">Sobre</a>
+                <a onClick={() => handleNavigate("/")}>Home</a>
               </DropdownMenuItem>
               <DropdownMenuItem className="ml-4 text-base">
                 <svg
@@ -310,26 +310,7 @@ export function Navbar() {
                   />
                 </svg>
 
-                <a href="#projects">Projetos</a>
-              </DropdownMenuItem>
-
-              <DropdownMenuItem className="ml-4 text-base">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                  className="w-4 h-4 mr-2"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M14.25 9.75v-4.5m0 4.5h4.5m-4.5 0 6-6m-3 18c-8.284 0-15-6.716-15-15V4.5A2.25 2.25 0 0 1 4.5 2.25h1.372c.516 0 .966.351 1.091.852l1.106 4.423c.11.44-.054.902-.417 1.173l-1.293.97a1.062 1.062 0 0 0-.38 1.21 12.035 12.035 0 0 0 7.143 7.143c.441.162.928-.004 1.21-.38l.97-1.293a1.125 1.125 0 0 1 1.173-.417l4.423 1.106c.5.125.852.575.852 1.091V19.5a2.25 2.25 0 0 1-2.25 2.25h-2.25Z"
-                  />
-                </svg>
-
-                <a href="#contact">Contato</a>
+                <a onClick={() => handleNavigate("/projects")}>Projetos</a>
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
