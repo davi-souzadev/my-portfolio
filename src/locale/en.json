@@ -1,0 +1,55 @@
+{
+  "translation": {
+    "navbar": {
+      "projects": "Projects",
+      "dark": "Dark",
+      "light": "Light",
+      "portuguese": "Portuguese",
+      "english": "English",
+      "theme": "Theme",
+      "language": "Languange"
+    },
+    "about": {
+      "aboutTitle": "Hello, my name is Davi.",
+      "aboutParagraph": "I am a Front-end developer passionate about creating intuitive interfaces and engaging digital experiences.",
+      "aboutStacks": "These are my main stacks that I use in my daily routine:",
+      "experiences": "Experiences"
+    },
+    "projects": {
+      "projectTitle": "Projects",
+      "projectDescription": "Projects developed in courses, personal projects, or code challenges. Find more on my "
+    },
+    "experiences": [
+      {
+        "id": 1,
+        "company": "Fi-Analytics",
+        "role": "Intern in Systems Development",
+        "since": "April 2023 - Present"
+      },
+      {
+        "id": 2,
+        "company": "Proviter IT Academy",
+        "role": "Full-stack Development Student",
+        "since": "March 2023 - July 2023"
+      },
+      {
+        "id": 3,
+        "company": "dio.me",
+        "role": "Front-end Development Student",
+        "since": "July 2023 - December 2023"
+      },
+      {
+        "id": 4,
+        "company": "Rocketseat",
+        "role": "Front-end Development Student",
+        "since": "May 2022 - December 2022"
+      },
+      {
+        "id": 5,
+        "company": "UNESA",
+        "role": "Information Systems Student",
+        "since": "February 2020 - Present"
+      }
+    ]
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "translation": {
+    "navbar": {
+      "projects": "Projetos",
+      "dark": "Escuro",
+      "light": "Claro",
+      "portuguese": "Português",
+      "english": "Inglês",
+      "theme": "Tema",
+      "language": "Idioma"
+    },
+    "about": {
+      "aboutTitle": "Olá, meu nome é Davi.",
+      "aboutParagraph": "Eu sou um desenvolvedor Front-end apaixonado por criar interfaces intuitivas e experiências digitais envolventes.",
+      "aboutStacks": "Essas são minhas as principais Stacks que utilizo no meu dia a dia:",
+      "experiences": "Experiências"
+    },
+    "projects": {
+      "projectTitle": "Projetos",
+      "projectDescription": "Projetos desenvolvidos em cursos, porjetos pessoais ou desafios de código. Encontre mais no meu "
+    },
+    "experiences": [
+      {
+        "id": 1,
+        "company": "Fi-Analytics",
+        "role": "Estágio em Desenvolvimento de sistemas",
+        "since": "Abril 2023 - Atualmente"
+      },
+      {
+        "id": 2,
+        "company": "Proviter IT Academy",
+        "role": "Estudante em desenvolvimento Full-stack",
+        "since": "Março 2023 - Julho 2023"
+      },
+      {
+        "id": 3,
+        "company": "dio.me",
+        "role": "Estudante em desenvolvimento Front-end",
+        "since": "Julho 2023 - Dezembro 2023"
+      },
+      {
+        "id": 4,
+        "company": "Rocketseat",
+        "role": "Estudante em desenvolvimento Front-end",
+        "since": "Maio 2022 - Dezembro 2022"
+      },
+      {
+        "id": 5,
+        "company": "UNESA",
+        "role": "Estudante em Sistemas de Informação",
+        "since": "Fevereiro 2020 - Atualmente"
+      }
+    ]
+  }
+}
