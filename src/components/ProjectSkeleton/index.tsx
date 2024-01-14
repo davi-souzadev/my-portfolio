@@ -8,7 +8,7 @@ export function ProjectSkeleton() {
         return (
           <Card
             key={index}
-            className="w-80 h-40 flex flex-col justify-between"
+            className="w-full md:w-80 h-40 flex flex-col justify-between"
           >
             <CardHeader className="p-6">
               <div className="flex justify-between">
