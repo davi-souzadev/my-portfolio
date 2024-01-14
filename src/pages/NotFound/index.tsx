@@ -1,7 +1,10 @@
 import { Separator } from "../../components/ui/separator"
 import React from "react"
+import { useChangeLanguage } from "../../hooks/useChangeLanguage"
 
 export function NotFound() {
+  const { t } = useChangeLanguage()
+
   return (
     <div className="h-full w-full flex justify-center items-center gap-4 ">
       <h1 className="text-3xl">404</h1>
@@ -9,7 +12,7 @@ export function NotFound() {
         orientation="vertical"
         className="h-12"
       />
-      <span className="text-xl">Not found</span>
+      <span className="text-xl">{t("notFound")}</span>
     </div>
   )
 }
