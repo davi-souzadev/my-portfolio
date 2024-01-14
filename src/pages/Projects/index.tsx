@@ -1,9 +1,10 @@
 import React from "react"
 import { useQuery } from "@tanstack/react-query"
 import { FaExternalLinkAlt } from "react-icons/fa"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent, CardHeader, CardTitle } from "../../components/ui/card"
 import { Badge } from "../../components/ui/badge"
 import { ProjectSkeleton } from "../../components/ProjectSkeleton"
+import { useChangeLanguage } from "../../hooks/useChangeLanguage"
 
 type RepoProps = {
   id: number
@@ -39,16 +40,21 @@ export function Projects() {
       })
     : []
 
+  const { t } = useChangeLanguage()
+
   if (isError) {
-    return <span>Error: {error.message}</span>
+    return (
+      <div className="flex justify-center items-center">
+        <h1>Error: {error.message}</h1>
+      </div>
+    )
   }
 
   return (
     <div className="h-full w-full flex flex-col mt-8 pb-8 gap-4 px-4 ">
       <h2 className="text-2xl mb-4">Projetos</h2>
       <p className="text-muted-foreground">
-        Projetos desenvolvidos em cursos, porjetos pessoais ou desafios de código.
-        Encontre mais no meu{" "}
+        {t("projects.projectDescription")}
         <a
           href="https://github.com/davi-souzadev"
           className="underline"
@@ -64,7 +70,7 @@ export function Projects() {
             return (
               <Card
                 key={repo.id}
-                className="w-full md:w-80  h-40 flex flex-col justify-between"
+                className="w-full md:w-78  h-40 flex flex-col justify-between"
               >
                 <CardHeader className="p-6">
                   <div className="flex justify-between">
