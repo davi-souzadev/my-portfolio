@@ -1,5 +1,4 @@
 import React from "react"
-import { BrowserRouter } from "react-router-dom"
 import AppRoutes from "./routes/routes"
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
 
@@ -11,18 +10,16 @@ const queryClient = new QueryClient()
 
 function App() {
   return (
-    <BrowserRouter>
-      <ThemeProvider
-        defaultTheme="dark"
-        storageKey="vite-ui-theme"
-      >
-        <QueryClientProvider client={queryClient}>
-          <div className="container flex min-h-screen justify-between flex-col px-0 md:px-8 pb-8 w-dvw md:w-[45rem]">
-            <AppRoutes />
-          </div>
-        </QueryClientProvider>
-      </ThemeProvider>
-    </BrowserRouter>
+    <ThemeProvider
+      defaultTheme="dark"
+      storageKey="vite-ui-theme"
+    >
+      <QueryClientProvider client={queryClient}>
+        <div className="container flex min-h-screen justify-between flex-col px-0 md:px-8 pb-8 w-dvw md:w-[45rem]">
+          <AppRoutes />
+        </div>
+      </QueryClientProvider>
+    </ThemeProvider>
   )
 }
 
