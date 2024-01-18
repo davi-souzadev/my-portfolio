@@ -1,7 +1,7 @@
 import React from "react"
 import { About } from "../../components/About"
 
-export default function Home() {
+export function Home() {
   return (
     <main>
       <section className="py-16">

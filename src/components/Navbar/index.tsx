@@ -41,8 +41,8 @@ export function Navbar() {
         <div className="flex ml-4 md:ml-0">
           <div className="md:flex space-x-1 items-center justify-center font-bold w-40">
             <a
-              className="flex text-xl items-center md:text-2xl w-full"
-              onClick={() => handleNavigate("/")}
+              className="flex text-xl items-center md:text-2xl w-full cursor-pointer"
+              onClick={() => handleNavigate("/my-portfolio/")}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -66,14 +66,14 @@ export function Navbar() {
         <div className="hidden md:flex items-center space-x-1">
           <Button
             variant={"ghost"}
-            onClick={() => handleNavigate("/")}
+            onClick={() => handleNavigate("/my-portfolio/")}
           >
             Home
           </Button>
 
           <Button
             variant={"ghost"}
-            onClick={() => handleNavigate("/projects")}
+            onClick={() => handleNavigate("/my-portfolio/projects")}
           >
             {t("navbar.projects")}
           </Button>
@@ -209,11 +209,13 @@ export function Navbar() {
               <DropdownMenuItem className="ml-4 text-base">
                 <HiOutlineHome className="w-4 h-4 mr-2" />
 
-                <a onClick={() => handleNavigate("/")}>Home</a>
+                <a onClick={() => handleNavigate("/my-portfolio/")}>Home</a>
               </DropdownMenuItem>
               <DropdownMenuItem className="ml-4 text-base">
                 <FiFolder className="w-4 h-4 mr-2" />
-                <a onClick={() => handleNavigate("/projects")}>{t("navbar.projects")}</a>
+                <a onClick={() => handleNavigate("/my-portfolio/projects")}>
+                  {t("navbar.projects")}
+                </a>
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>

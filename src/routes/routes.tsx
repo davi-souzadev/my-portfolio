@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom"
 import React from "react"
-import Home from "../pages/Home"
+import { Home } from "../pages/Home"
 import { NotFound } from "../pages/NotFound"
 import { Projects } from "../pages/Projects"
 
@@ -8,15 +8,15 @@ export default function AppRoutes() {
   return (
     <Routes>
       <Route
-        path="/"
+        path="/my-portfolio/"
         element={<Home />}
       />
       <Route
-        path="/projects"
+        path="/my-portfolio/projects"
         element={<Projects />}
       />
       <Route
-        path="*"
+        path="/my-portfolio/*"
         element={<NotFound />}
       />
     </Routes>
