@@ -36,7 +36,7 @@ export function Navbar() {
         <div className="flex ml-4 md:ml-0">
           <div className="md:flex space-x-1 items-center justify-center font-bold w-40">
             <Link
-              to="/"
+              to="/my-portfolio/"
               className="flex text-xl items-center md:text-2xl w-full cursor-pointer"
               // onClick={() => handleNavigate("/my-portfolio/")}
             >
@@ -65,14 +65,14 @@ export function Navbar() {
             variant={"ghost"}
             // onClick={() => handleNavigate("/")}
           >
-            <Link to="/">Home</Link>
+            <Link to="/my-portfolio/">Home</Link>
           </Button>
 
           <Button
             asChild
             variant={"ghost"}
           >
-            <Link to="/projects">{t("navbar.projects")}</Link>
+            <Link to="/my-portfolio/projects">{t("navbar.projects")}</Link>
           </Button>
 
           <DropdownMenu
@@ -206,11 +206,11 @@ export function Navbar() {
               <DropdownMenuItem className="ml-4 text-base">
                 <HiOutlineHome className="w-4 h-4 mr-2" />
 
-                <Link to="/">Home</Link>
+                <Link to="/my-portfolio/">Home</Link>
               </DropdownMenuItem>
               <DropdownMenuItem className="ml-4 text-base">
                 <FiFolder className="w-4 h-4 mr-2" />
-                <Link to="/projects">{t("navbar.projects")}</Link>
+                <Link to="/my-portfolio/projects">{t("navbar.projects")}</Link>
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>

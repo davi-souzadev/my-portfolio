@@ -7,16 +7,16 @@ import { createBrowserRouter } from "react-router-dom"
 
 export const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/my-portfolio/",
     element: <Layout />,
     errorElement: <NotFound />,
     children: [
       {
-        path: "/",
+        path: "/my-portfolio/",
         element: <Home />,
       },
       {
-        path: "/projects",
+        path: "/my-portfolio/projects",
         element: <Projects />,
       },
       {
