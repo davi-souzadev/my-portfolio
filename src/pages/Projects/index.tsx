@@ -54,7 +54,6 @@ export function Projects() {
 
   return (
     <>
-      <Navbar />
       <div className="h-full w-full flex flex-col mt-8 pb-8 gap-4 px-4 ">
         <h2 className="text-2xl mb-4">{t("projects.projectTitle")}</h2>
         <p className="text-muted-foreground">
@@ -120,7 +119,6 @@ export function Projects() {
           )}
         </div>
       </div>
-      <Footer />
     </>
   )
 }

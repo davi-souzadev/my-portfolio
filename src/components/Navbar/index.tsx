@@ -13,15 +13,14 @@ import { HiOutlineHome } from "react-icons/hi2"
 
 import { useTheme } from "@/components/ThemeProvider"
 import { Button } from "../ui/button"
-import { useRouter } from "../../hooks/useRouter"
 import { useChangeLanguage } from "../../hooks/useChangeLanguage"
+import { Link } from "react-router-dom"
 
 export function Navbar() {
   const [isOptionsOpen, setIsOptionOpen] = useState(false)
   const [isDesktopOptionsOpen, setDesktopIsOptionOpen] = useState(false)
   const { t, handleChangeLanguage } = useChangeLanguage()
   const { setTheme } = useTheme()
-  const { navigate } = useRouter()
 
   function toggleOpenOptions() {
     setIsOptionOpen(!isOptionsOpen)
@@ -31,18 +30,15 @@ export function Navbar() {
     setDesktopIsOptionOpen(!isDesktopOptionsOpen)
   }
 
-  function handleNavigate(page: string) {
-    navigate(page)
-  }
-
   return (
     <nav className="w-full bg-transparent  md:mx-auto mt-4">
       <div className="w-full border-b-[1px] border-gray-900 border-opacity-10 h-16 flex items-center justify-between dark:border-gray-100 dark:border-opacity-10">
         <div className="flex ml-4 md:ml-0">
           <div className="md:flex space-x-1 items-center justify-center font-bold w-40">
-            <a
+            <Link
+              to="/"
               className="flex text-xl items-center md:text-2xl w-full cursor-pointer"
-              onClick={() => handleNavigate("/my-portfolio/")}
+              // onClick={() => handleNavigate("/my-portfolio/")}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -59,23 +55,24 @@ export function Navbar() {
                 />
               </svg>
               Davi Souza
-            </a>
+            </Link>
           </div>
         </div>
 
         <div className="hidden md:flex items-center space-x-1">
           <Button
+            asChild
             variant={"ghost"}
-            onClick={() => handleNavigate("/my-portfolio/")}
+            // onClick={() => handleNavigate("/")}
           >
-            Home
+            <Link to="/">Home</Link>
           </Button>
 
           <Button
+            asChild
             variant={"ghost"}
-            onClick={() => handleNavigate("/my-portfolio/projects")}
           >
-            {t("navbar.projects")}
+            <Link to="/projects">{t("navbar.projects")}</Link>
           </Button>
 
           <DropdownMenu
@@ -209,13 +206,11 @@ export function Navbar() {
               <DropdownMenuItem className="ml-4 text-base">
                 <HiOutlineHome className="w-4 h-4 mr-2" />
 
-                <a onClick={() => handleNavigate("/my-portfolio/")}>Home</a>
+                <Link to="/">Home</Link>
               </DropdownMenuItem>
               <DropdownMenuItem className="ml-4 text-base">
                 <FiFolder className="w-4 h-4 mr-2" />
-                <a onClick={() => handleNavigate("/my-portfolio/projects")}>
-                  {t("navbar.projects")}
-                </a>
+                <Link to="/projects">{t("navbar.projects")}</Link>
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>

@@ -9,7 +9,6 @@ export function NotFound() {
 
   return (
     <>
-      <Navbar />
       <div className="h-full w-full flex justify-center items-center gap-4 ">
         <h1 className="text-3xl">404</h1>
         <Separator
@@ -18,7 +17,6 @@ export function NotFound() {
         />
         <span className="text-xl">{t("notFound")}</span>
       </div>
-      <Footer />
     </>
   )
 }
