@@ -21,7 +21,7 @@ export function ExperienceCard({ fallback, company, role, since }: ExperienceCar
         className="flex flex-col justify-center pt-6 pl-0 flex-grow"
         id="123"
       >
-        <h3 className="text-white">{company}</h3>
+        <h3>{company}</h3>
         <div className="text-muted-foreground">
           <p>{role}</p>
           <p>{since}</p>
