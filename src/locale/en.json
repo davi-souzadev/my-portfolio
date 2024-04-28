@@ -22,30 +22,36 @@
     "experiences": [
       {
         "id": 1,
-        "company": "NetQuant",
+        "company": "Fi-Analytics",
         "role": "Intern in Systems Development",
-        "since": "April 2023 - Present"
+        "since": "April 2024 - Present"
       },
       {
         "id": 2,
+        "company": "NetQuant",
+        "role": "Intern in Systems Development",
+        "since": "April 2023 - April 2024"
+      },
+      {
+        "id": 3,
         "company": "Proviter IT Academy",
         "role": "Full-stack Development Student",
         "since": "March 2023 - July 2023"
       },
       {
-        "id": 3,
+        "id": 4,
         "company": "dio.me",
         "role": "Front-end Development Student",
         "since": "July 2023 - December 2023"
       },
       {
-        "id": 4,
+        "id": 5,
         "company": "Rocketseat",
         "role": "Front-end Development Student",
         "since": "May 2022 - December 2022"
       },
       {
-        "id": 5,
+        "id": 6,
         "company": "UNESA",
         "role": "Information Systems Student",
         "since": "February 2020 - Present"

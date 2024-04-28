@@ -22,30 +22,36 @@
     "experiences": [
       {
         "id": 1,
-        "company": "NetQuant",
+        "company": "Fi-Analytics",
         "role": "Estágio em Desenvolvimento de sistemas",
-        "since": "Abril 2023 - Atualmente"
+        "since": "Abril 2024 - Atualmente"
       },
       {
         "id": 2,
+        "company": "NetQuant",
+        "role": "Estágio em Desenvolvimento de sistemas",
+        "since": "Abril 2023 - Abril 2024"
+      },
+      {
+        "id": 3,
         "company": "Proviter IT Academy",
         "role": "Estudante em desenvolvimento Full-stack",
         "since": "Março 2023 - Julho 2023"
       },
       {
-        "id": 3,
+        "id": 4,
         "company": "dio.me",
         "role": "Estudante em desenvolvimento Front-end",
         "since": "Julho 2023 - Dezembro 2023"
       },
       {
-        "id": 4,
+        "id": 5,
         "company": "Rocketseat",
         "role": "Estudante em desenvolvimento Front-end",
         "since": "Maio 2022 - Dezembro 2022"
       },
       {
-        "id": 5,
+        "id": 6,
         "company": "UNESA",
         "role": "Estudante em Sistemas de Informação",
         "since": "Fevereiro 2020 - Atualmente"
