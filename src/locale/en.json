@@ -23,38 +23,44 @@
       {
         "id": 1,
         "company": "Fi-Analytics",
-        "role": "Intern in Systems Development",
-        "since": "April 2024 - Present"
+        "role": "Systems Developer",
+        "since": "January 2025 - Present"
       },
       {
         "id": 2,
+        "company": "Fi-Analytics",
+        "role": "Intern in Systems Development",
+        "since": "April 2024 - December 2024"
+      },
+      {
+        "id": 3,
         "company": "NetQuant",
         "role": "Intern in Systems Development",
         "since": "April 2023 - April 2024"
       },
       {
-        "id": 3,
+        "id": 4,
         "company": "Proviter IT Academy",
         "role": "Full-stack Development Student",
         "since": "March 2023 - July 2023"
       },
       {
-        "id": 4,
+        "id": 5,
         "company": "dio.me",
         "role": "Front-end Development Student",
         "since": "July 2023 - December 2023"
       },
       {
-        "id": 5,
+        "id": 6,
         "company": "Rocketseat",
         "role": "Front-end Development Student",
         "since": "May 2022 - December 2022"
       },
       {
-        "id": 6,
+        "id": 7,
         "company": "UNESA",
-        "role": "Information Systems Student",
-        "since": "February 2020 - Present"
+        "role": "Bachelor in Information Systems",
+        "since": "February 2020 - December 2024"
       }
     ],
     "notFound": "Page not found."
